@@ -1,4 +1,4 @@
-<b>Technologies Used:<b><br>
+Technologies Used:<br>
 (1) React<br>
 (2) Java Spring Boot<br>
 (3) Apache Solr<br>
