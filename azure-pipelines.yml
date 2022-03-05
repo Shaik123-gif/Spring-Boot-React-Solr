@@ -6,12 +6,12 @@
 parameters:
 - name: message
   type: string
-  default: Install NodeJS
+  default: Install Maven
   values:
-  - Install NodeJS Shaik
-  - Install Nodejs for Windows
-  - Install Nodejs for Linux
-  - Install Nodejs for Mac
+  - Install Maven Shaik
+  - Install Maven for Windows
+  - Install Maven for Linux
+  - Install Maven for Mac
 
 
 
@@ -22,10 +22,10 @@ pool: Sample
 
 steps:
 - task: Maven@3
+  displayName: ${{ parameters.message }}
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- script: echo ${{ parameters.message }}
