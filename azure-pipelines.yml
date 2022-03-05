@@ -3,6 +3,18 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
+parameters:
+- name: message
+  type: string
+  default: Install NodeJS
+  values:
+  - Install NodeJS Shaik
+  - Install Nodejs for Windows
+  - Install Nodejs for Linux
+  - Install Nodejs for Mac
+
+
+
 trigger:
 - master
 
@@ -16,3 +28,4 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- script: echo ${{ parameters.message }}
