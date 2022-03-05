@@ -6,7 +6,7 @@
 parameters:
 - name: message
   type: string
-  default: Install Maven
+  default: Install Maven Shaik
   values:
   - Install Maven Shaik
   - Install Maven for Windows
